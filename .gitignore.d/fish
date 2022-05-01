@@ -1,0 +1,8 @@
+*
+!/.gitignore.d
+!/.gitignore.d/fish
+!/.README.d
+!/.README.d/fish.md
+!/.config
+!/.config/fish
+!/.config/fish/config.fish
