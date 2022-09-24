@@ -1,8 +1,8 @@
 if status is-interactive
     set fish_greeting # Disable greeting message.
 
-    [ test -x /opt/homebrew/bin/brew ] && eval (/opt/homebrew/bin/brew shellenv)
-    [ test -d $HOME/.local/bin ] && fish_add_path $HOME/.local/bin
+    test -x /opt/homebrew/bin/brew && eval (/opt/homebrew/bin/brew shellenv)
+    test -d $HOME/.local/bin && fish_add_path $HOME/.local/bin
 
     set -Ux BAT_THEME Catppuccin-mocha
 
