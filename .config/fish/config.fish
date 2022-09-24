@@ -1,13 +1,17 @@
 if status is-interactive
     set fish_greeting # Disable greeting message.
-    eval (/opt/homebrew/bin/brew shellenv)
-    fish_add_path $HOME/.local/bin
+
+    [ test -x /opt/homebrew/bin/brew ] && eval (/opt/homebrew/bin/brew shellenv)
+    [ test -d $HOME/.local/bin ] && fish_add_path $HOME/.local/bin
 
     set -Ux BAT_THEME Catppuccin-mocha
 
+    # Set if your term supports `pipenv shell --fancy`.
+    set pipenv_fish_fancy yes
+
     function fish_mode_prompt
     end
-    # starship init fish | source
+
     function fish_prompt
         set -l prompt_symbol '❯'
         fish_is_root_user; and set prompt_symbol '#'
