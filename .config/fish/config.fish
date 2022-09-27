@@ -25,6 +25,10 @@ if status is-interactive
         set -l whoami (whoami)
         string match -rq "/google/src/cloud/$whoami/(?<citc_space>[a-zA-Z0-9_-]+)/google3" (pwd)
         if test -n "$citc_space"
+            # Rename the current tab.
+            title $citc_space
+
+            # Echo the citc space name.
             set_color brwhite
             echo -n "("
             set_color blue
