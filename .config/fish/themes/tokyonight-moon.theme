@@ -1,38 +1,38 @@
 # TokyoNight Color Palette
-set -l foreground c8d3f5
-set -l selection 3654a7
-set -l comment 7a88cf
-set -l red ff757f
-set -l orange ff966c
-set -l yellow ffc777
-set -l green c3e88d
-set -l purple fca7ea
-set -l cyan 86e1fc
-set -l pink c099ff
+# set -l foreground c8d3f5
+# set -l selection 3654a7
+# set -l comment 7a88cf
+# set -l red ff757f
+# set -l orange ff966c
+# set -l yellow ffc777
+# set -l green c3e88d
+# set -l purple fca7ea
+# set -l cyan 86e1fc
+# set -l pink c099ff
 
 # Syntax Highlighting Colors
-fish_color_normal $foreground
-fish_color_command $cyan
-fish_color_keyword $pink
-fish_color_quote $yellow
-fish_color_redirection $foreground
-fish_color_end $orange
-fish_color_error $red
-fish_color_param $purple
-fish_color_comment $comment
-fish_color_selection --background=$selection
-fish_color_search_match --background=$selection
-fish_color_operator $green
-fish_color_escape $pink
-fish_color_autosuggestion $comment
-fish_color_cwd $green
+fish_color_normal c8d3f5
+fish_color_command 86e1fc
+fish_color_keyword c099ff
+fish_color_quote ffc777
+fish_color_redirection c8d3f5
+fish_color_end ff966c
+fish_color_error ff757f
+fish_color_param fca7ea
+fish_color_comment 7a88cf
+fish_color_selection --background=3654a7
+fish_color_search_match --background=3654a7
+fish_color_operator c3e88d
+fish_color_escape c099ff
+fish_color_autosuggestion 7a88cf
+fish_color_cwd c3e88d
 fish_color_user $blue
-fish_color_host $yellow
-fish_color_cancel $red
+fish_color_host ffc777
+fish_color_cancel ff757f
 
 # Completion Pager Colors
-fish_pager_color_progress $comment
-fish_pager_color_prefix $cyan
-fish_pager_color_completion $foreground
-fish_pager_color_description $comment
-fish_pager_color_selected_background --background=$selection
+fish_pager_color_progress 7a88cf
+fish_pager_color_prefix 86e1fc
+fish_pager_color_completion c8d3f5
+fish_pager_color_description 7a88cf
+fish_pager_color_selected_background --background=3654a7
