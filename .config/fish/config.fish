@@ -5,6 +5,7 @@ if status is-interactive
     test -d $HOME/.local/bin && fish_add_path $HOME/.local/bin
 
     set -Ux BAT_THEME TwoDark
+    set -Ux FZF_DEFAULT_OPTS '--color=fg:#abb2bf,bg:#21252b,hl:#61afef --color=fg+:#abb2bf,bg+:#21252b,hl+:#61afef --color=info:#e5c07b,prompt:#e06c75,pointer:#e06c75 --color=marker:#98c379,spinner:#c678dd,header:#56b6c2'
 
     # Set if your term supports `pipenv shell --fancy`.
     set pipenv_fish_fancy yes
