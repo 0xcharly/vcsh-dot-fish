@@ -4,7 +4,7 @@ if status is-interactive
     test -x /opt/homebrew/bin/brew && eval (/opt/homebrew/bin/brew shellenv)
     test -d $HOME/.local/bin && fish_add_path $HOME/.local/bin
 
-    set -Ux BAT_THEME Enki-Tokyo-Night
+    set -Ux BAT_THEME TwoDark
 
     # Set if your term supports `pipenv shell --fancy`.
     set pipenv_fish_fancy yes
