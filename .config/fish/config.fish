@@ -6,9 +6,13 @@ if status is-interactive
 
     set -Ux BAT_THEME TwoDark
     set -Ux FZF_DEFAULT_OPTS '--color=fg:#abb2bf,bg:#21252b,hl:#61afef --color=fg+:#abb2bf,bg+:#21252b,hl+:#61afef --color=info:#e5c07b,prompt:#e06c75,pointer:#e06c75 --color=marker:#98c379,spinner:#c678dd,header:#56b6c2'
+    set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
 
     # Set if your term supports `pipenv shell --fancy`.
     set pipenv_fish_fancy yes
+
+    bind \cf ~/.local/bin/open-tmux-workspace
+    bind -M insert \cf ~/.local/bin/open-tmux-workspace
 
     function fish_mode_prompt
     end
@@ -16,7 +20,7 @@ if status is-interactive
     function fish_prompt
         set -l prompt_symbol '❯'
         fish_is_root_user; and set prompt_symbol '#'
-        set_color brwhite
+        set_color brblack
         echo -n (date "+%H:%M:%S") (format_pwd) (set_color blue)
         echo -n $prompt_symbol (set_color normal)
     end
@@ -46,3 +50,4 @@ if status is-interactive
         end
     end
 end
+
