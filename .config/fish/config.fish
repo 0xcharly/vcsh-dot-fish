@@ -9,7 +9,7 @@ if status is-interactive
     set -gx SUDO_EDITOR $EDITOR
 
     set -Ux BAT_THEME TwoDark
-    set -Ux FZF_DEFAULT_OPTS '--color=fg:#abb2bf,bg:#21252b,hl:#61afef --color=fg+:#abb2bf,bg+:#21252b,hl+:#61afef --color=info:#e5c07b,prompt:#e06c75,pointer:#e06c75 --color=marker:#98c379,spinner:#c678dd,header:#56b6c2'
+    set -Ux FZF_DEFAULT_OPTS " --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
     set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
     set -gx PATH $HOME/.cabal/bin $PATH $HOME/.ghcup/bin # ghcup-env
 
