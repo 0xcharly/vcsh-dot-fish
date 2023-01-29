@@ -30,7 +30,7 @@ if status is-interactive
         set -l prompt_symbol '❯'
         fish_is_root_user; and set prompt_symbol '#'
         set_color brblack
-        echo -n (date "+%H:%M:%S") (format_pwd) (set_color blue)
+        echo -n (date "+%H:%M:%S") (format_pwd) (set_color brblue)
         echo -n $prompt_symbol (set_color normal)
     end
 
@@ -43,18 +43,18 @@ if status is-interactive
             title $citc_space
 
             # Echo the citc space name.
-            set_color brwhite
+            set_color white
             echo -n "("
-            set_color blue
+            set_color brblue
             echo -n citc
-            set_color brwhite
+            set_color white
             echo -n ":"
-            set_color green
+            set_color brgreen
             echo -n $citc_space
-            set_color brwhite
+            set_color white
             echo -n ")"
         else
-            set_color brgreen
+            set_color green
             echo (prompt_pwd)
         end
     end
